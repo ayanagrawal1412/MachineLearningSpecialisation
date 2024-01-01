@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 x_train = np.array([1.0,2.0])
 y_train = np.array([300.0, 500.0])
 
-w=199
-b=101
+w=200
+b=100
 
 def compute_cost(w,b,x,y):
     m=len(x)
@@ -14,6 +14,9 @@ def compute_cost(w,b,x,y):
         y_hat = w*x[i]+b
         cost +=(y_hat-y[i])**2
     return cost/(2*m)
+
+print (f"costfn={compute_cost(w,b,x_train,y_train)}")
+print (f"costvector={sum((w*x_train+b-y_train)**2)/(2*len(x_train))}")
 
 def compute_model(w,b,x,y):
     m=len(x)
@@ -34,6 +37,10 @@ def compute_derivatives(w,b,x,y):
         der[0]+=(w*x[i]+b-y[i])*x[i]/m
         der[1]+=(w*x[i]+b-y[i])/m
     return der
+
+print (f"derfn={compute_derivatives(w,b,x_train,y_train)[0]}")
+print (f"dervector={sum((w*x_train+b-y_train)*x_train/len(x_train))}")
+
 
 def compute_best_fit(x,y,w,b,a,s):
     cost=compute_cost(w,b,x,y)

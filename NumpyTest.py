@@ -1,3 +1,4 @@
+import time
 import numpy as np
 a=np.array([1,2,3,4,5])
 print(f"a = {a}")
@@ -22,3 +23,10 @@ print(f"a-d = {a-d}")
 
 print("Hello there")
 
+np.newaxis
+
+c=time.time()
+
+np.zeros(2)
+
+a.reshape

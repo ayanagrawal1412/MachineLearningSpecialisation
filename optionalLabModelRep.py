@@ -23,7 +23,7 @@ print (len(x_train))
 #plt.scatter(x_train,y_train,marker='x',c='r')
 #plt.show()
 
-w=200
+w=100
 b=100
 
 #f_wb = np.zeros(m)
